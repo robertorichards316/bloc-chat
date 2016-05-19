@@ -1,7 +1,10 @@
 <h1>Bloc Chat</h1>
 <h4>Chat Rooms</h4>
 
-<section class="home-control" ng-controller='HomeCtrl as home'>
-  <div class="room-container" ng-repeat="room in rooms">Room 1</div>
+<section class="home-control">
+  <div class="room-container" ng-repeat="room in home.rooms">
+    {{ room }}
+
+  </div>
 
 </section>
