@@ -1,6 +1,8 @@
 (function() {
   function HomeCtrl() {
-    this.rooms = ['room1', 'room2', 'room3'];
+    this.rooms = ['Room 1', 'Room 2', 'Room 3'];
+
+
   }
 
   angular
