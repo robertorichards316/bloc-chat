@@ -16,7 +16,7 @@
     }
 
     return {
-      all: rooms
+      all: rooms,
       addRoom: addRoom,
       getMessages: getMessages
     };

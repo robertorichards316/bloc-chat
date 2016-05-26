@@ -12,9 +12,9 @@
            controller: 'HomeCtrl as home',
            templateUrl: '/templates/home.html'
          });
-  }
+       }
 
   angular
-     .module('blocChat', ['ui.router'])
+     .module('blocChat', ['ui.router', 'ui.bootstrap'])
      .config(config);
 })();
