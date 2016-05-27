@@ -1,11 +1,19 @@
-<h1>Bloc Chat</h1>
-<h4>Chat Rooms</h4>
+<div class='container container-chatdisplay'>
 
-<section class="home-control">
-  <button type="button" ng-click="home.modalRoom()">New Room</button>
-  <div class="room-container" ng-repeat="room in home.rooms">
-    {{ room }}
+  <div class='container container-roomlist'>
+    <div class='roomlist'>
+      <h2 class='roomlist-header'>Bloc Chat</h2>
 
+      <div class="btn btn-primary btn-create-room" ng-click="home.createRoomModal()">
+        New Room
+      </div>
+
+      <div class='room-names'>
+        <div class='room-name' ng-repeat='room in home.rooms' ng-click="home.changeRoom()">
+          {{ room.name }}
+        </div>
+      </div>
+
+      {{ home.rooms.length }} rooms
+    </div>
   </div>
-
-</section>
