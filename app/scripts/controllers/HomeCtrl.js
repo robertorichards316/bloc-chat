@@ -1,13 +1,21 @@
 (function() {
-  function HomeCtrl() {
-    this.rooms = ['Room 1', 'Room 2', 'Room 3'];
-    this.modalRoom = function() {
-      console.log("Clicked in modal room");
+  function HomeCtrl(Room, $modal) {
+    this.rooms = Room.all;
+
+    this.createRoomModal = function() {
+      $modal.open({
+        templateUrl: 'templates/createRoomModal.html',
+        controller: 'CreateRoomCtrl',
+        size: 'sm'
+      });
     };
 
+    this.changeRoom = function() {
+      console.log('room was clicked!');
+    };
   }
 
   angular
-      .module('blocChat')
-      .controller('HomeCtrl', HomeCtrl);
+    .module('BlocChat')
+    .controller('HomeCtrl', ['Room', '$modal', HomeCtrl]);
 })();
